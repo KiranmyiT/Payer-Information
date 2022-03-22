@@ -13,7 +13,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
+  NavLink,
   Redirect,
 } from "react-router-dom";
 
@@ -23,16 +23,24 @@ const Info = () => {
       <Navbar>Payer Information</Navbar>
       <Dashboard>
         <Sidebar>
-          <Link to="/PayerConfig" style={{ textDecoration: "none" }}>
+          <NavLink
+            to="/PayerConfig"
+            activeClassName="current"
+            style={{ textDecoration: "none" }}
+          >
             <SidebarElement>
               <TableIcon /> Payer Config
             </SidebarElement>
-          </Link>
-          <Link to="/PayerStatus" style={{ textDecoration: "none" }}>
+          </NavLink>
+          <NavLink
+            to="/PayerStatus"
+            activeClassName="current"
+            style={{ textDecoration: "none" }}
+          >
             <SidebarElement>
               <TableIcon /> Payer Status
             </SidebarElement>
-          </Link>
+          </NavLink>
         </Sidebar>
         <PayerInfo>
           <Switch>

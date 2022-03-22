@@ -15,7 +15,13 @@ export const Navbar = styled.div`
 `;
 export const Sidebar = styled.div`
   width: 320px;
-  border-right: 1px solid #c0c0c0;
+  border-right: 1px solid #e0e0e0;
+  .current {
+    div {
+      background-color: #e0e0e0;
+      border-right: 0;
+    }
+  }
 `;
 export const SidebarElement = styled.div`
   text-decoration: none;
