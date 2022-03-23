@@ -44,7 +44,7 @@ const CreateDataPopup = (props) => {
           <h3 className="header"> Create Payer </h3>
           <PopupFlex>
             <div className="content">
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form id="createPayerData" onSubmit={handleSubmit(onSubmit)}>
                 <MessageContent>
                   <FieldContent>
                     <label>
@@ -52,6 +52,7 @@ const CreateDataPopup = (props) => {
                     </label>
                     <input
                       type="text"
+                      id="payerId"
                       aria-invalid={errors.name ? "true" : "false"}
                       {...register("payerId", {
                         required: true,
@@ -66,6 +67,7 @@ const CreateDataPopup = (props) => {
                     </label>
                     <input
                       type="text"
+                      id="payerName"
                       {...register("payerName", {
                         required: true,
                         pattern: /^[A-Za-z]+$/i,
@@ -77,6 +79,7 @@ const CreateDataPopup = (props) => {
                     <div>
                       <input
                         type="text"
+                        id="tradingPartnerId"
                         {...register("tradingPartnerId", {
                           pattern: /^[A-Za-z]+$/i,
                         })}
@@ -89,6 +92,7 @@ const CreateDataPopup = (props) => {
                     </label>
                     <div>
                       <select
+                        id="transactionTypes"
                         name="transactionTypes"
                         multiple
                         {...register("transactionTypes", {
@@ -98,10 +102,18 @@ const CreateDataPopup = (props) => {
                         <option value="" disabled>
                           Select
                         </option>
-                        <option value="PAC">PAC</option>
-                        <option value="MAC">MAC</option>
-                        <option value="CSI">CSI</option>
-                        <option value="Elig">Elig</option>
+                        <option id="PAC" value="PAC">
+                          PAC
+                        </option>
+                        <option id="MAC" value="MAC">
+                          MAC
+                        </option>
+                        <option id="CSI" value="CSI">
+                          CSI
+                        </option>
+                        <option id="Elig" value="Elig">
+                          Elig
+                        </option>
                       </select>
                     </div>
                   </FieldContent>
@@ -110,6 +122,7 @@ const CreateDataPopup = (props) => {
                       <label>Is Active:</label>
                       <input
                         type="checkbox"
+                        id="isActive"
                         {...register("isActive")}
                         defaultChecked={true}
                       />
@@ -124,6 +137,7 @@ const CreateDataPopup = (props) => {
                       <div>
                         <input
                           type="radio"
+                          id="status_Dark"
                           name="status"
                           value="Dark"
                           {...register("status")}
@@ -133,6 +147,7 @@ const CreateDataPopup = (props) => {
                       <div>
                         <input
                           type="radio"
+                          id="status_Live"
                           name="status"
                           value="Live"
                           {...register("status")}

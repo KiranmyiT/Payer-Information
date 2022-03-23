@@ -22,11 +22,13 @@
       "tradingPartnerId": "brandonn",
       "transactionTypes": [
         "PAC",
+        "MAC",
+        "CSI",
         "Elig"
       ],
-      "isActive": true,
+      "isActive": false,
       "status": "Live",
-      "updatedOn": "3/18/2022",
+      "updatedOn": "3/21/2022",
       "edit": 2,
       "delete": 2,
       "id": 2

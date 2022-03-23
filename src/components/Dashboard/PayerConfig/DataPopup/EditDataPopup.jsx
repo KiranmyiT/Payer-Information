@@ -92,6 +92,7 @@ const EditDataPopup = (props) => {
 
                 <div>
                   <select
+                    id="transactionTypes"
                     name="transactionTypes"
                     multiple
                     defaultValue={data.transactionTypes}
